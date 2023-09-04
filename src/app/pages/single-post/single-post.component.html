@@ -1,0 +1,31 @@
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card" *ngIf = "postData">
+                <div class="card-body">
+                    <img src="{{postData.postImgPath}}" alt="" class="post-img">
+                    <div class="my-2">
+                        <small class="badge bg-danger me-2">{{postData.category.category}}</small>
+                        <small  class="badge bg-warning me-2" *ngIf="postData.isFeatured">Feautered</small>
+                        <small  class="badge bg-info me-2">Views- {{postData.views}}</small>
+                    </div>
+                    <div>
+                        <h3>{{postData.title}}</h3>
+                        <p [innerHtml]="postData.content"></p>
+                    </div>
+                </div>
+            </div>
+            <app-comment-form></app-comment-form>
+            <app-comment-list></app-comment-list>
+
+        </div>
+        <div class="col-md-3" >
+            <div *ngFor="let similar of similarPosts">
+                <app-post-card [postCard]="similar"></app-post-card>
+            </div>
+            
+
+
+        </div>
+    </div>
+</div>

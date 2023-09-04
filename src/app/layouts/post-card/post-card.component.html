@@ -1,0 +1,11 @@
+<div class="card mb-3" *ngIf="postCard" [routerLink]="['/post',postCard.id]">
+    <img src="{{postCard.data.postImgPath}}" alt="" class='card-img-top card-image'>
+    <div class="card-body">
+        <small class="bg-light text-danger text-center">{{postCard.data.category.category}}</small>
+        <small class="bg-light text-success ms-2 text-center" *ngIf="postCard.data.isFeatured">Featured</small>
+        <small class="bg-light text-info ms-2 text-center">Views - {{postCard.data.views}}</small>
+        <h5 class="mt-2">{{postCard.data.title}}</h5>
+        <p>{{postCard.data.excerpt}}</p>
+        <small class="bg-light text-warning text-center">Last updated - {{postCard.data.createdAt.toMillis() | date}}</small>
+    </div>
+</div>

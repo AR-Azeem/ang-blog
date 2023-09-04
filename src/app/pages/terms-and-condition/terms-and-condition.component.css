@@ -1,0 +1,11 @@
+.about-body{
+    background-color: var(--primary-color);
+}
+.about-content{
+    background-color: #fefefe;
+}
+
+.btn-theme{
+    background-color: var(--primary-color);
+    width:20%
+}

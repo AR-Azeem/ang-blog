@@ -1,0 +1,16 @@
+<div class="bg-theme">    
+    <div class="contianer bg-theme p-3 text-white text-center">
+        <h3>{{categoryName}}</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, delectus?</p>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row mx-5">
+        <div class="col-md-4" *ngFor = "let cp of categoryPost">
+            <app-post-card [postCard]="cp"></app-post-card>
+        </div>
+        
+    </div>
+</div>
+   
